@@ -3,12 +3,14 @@ package qsort
 import "fmt"
 import "testing"
 import "math/rand"
+import "time"
 
 func TestQsort(t *testing.T) {
-	valuesLen := rand.Int() % 30
+	r := rand.New(rand.NewSource(time.Now().Unix()))
+	valuesLen := r.Int() % 30
 	values := make([]int, valuesLen)
 	for i := 0; i < len(values); i++ {
-		values[i] = rand.Int() % 10
+		values[i] = r.Int() % 10
 	}
 
 	fmt.Println("qsort nosort:", values)
