@@ -1,0 +1,2 @@
+UNAME: {%uname%}
+UID: {%uid%}
