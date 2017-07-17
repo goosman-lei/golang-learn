@@ -1,0 +1,11 @@
+#!/bin/bash
+__DIR__=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
+GO=go
+
+${GO} build -o bin/mysql-demo src/main.go
+if [ $? != 0 ] ;
+then
+	exit
+fi
+
+bin/mysql-demo
