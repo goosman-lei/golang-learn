@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export GOPATH=$(pwd)
+
+go install stack
+
+go build -o bin/main src/main.go
+
+bin/main
