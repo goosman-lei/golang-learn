@@ -1,0 +1,12 @@
+<html>
+<head>
+    <title>{{.Title}} - WikiPage</title>
+</head>
+<body>
+    <h1>{{.Title}}</h1>
+    <form method="POST" action="/save/{{.Title}}">
+    <textarea name="body" rows="20" cols="120">{{.Body}}</textarea>
+    <input type="submit" />
+    </form>
+</body>
+</html>
